@@ -631,6 +631,21 @@
     return d.innerHTML;
   }
 
+  // Atribución real (2026-10-22, pedido de Sebas): de qué pieza de contenido
+  // vino cada respuesta, para saber cuál CTA/formato sí convierte. Se agrega
+  // ?origen=<etiqueta> al link que se comparte en cada historia/post/bio, y
+  // se guarda tal cual en cada envío — nunca se adivina, si no viene el
+  // parámetro queda "directo_o_sin_etiquetar" (honesto, no se inventa).
+  function getOrigenParam() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var origen = params.get("origen");
+      return origen ? origen : "directo_o_sin_etiquetar";
+    } catch (e) {
+      return "directo_o_sin_etiquetar";
+    }
+  }
+
   // FORMSPREE_ENDPOINT: reemplazar por el endpoint real una vez creada la
   // cuenta gratuita en https://formspree.io (Sebas, 2026-10-22) — formulario
   // "nuevo formulario", copiar el link que empieza con https://formspree.io/f/...
@@ -666,6 +681,7 @@
       puntaje_pct: pct,
       veredicto: tier.label,
       respuestas_detalle: JSON.stringify(state.respuestas),
+      origen: getOrigenParam(),
       _subject: "Nueva evaluación de marca: " + (state.datos.marca || "(sin nombre)")
     };
 
