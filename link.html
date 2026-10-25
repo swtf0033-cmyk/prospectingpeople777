@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospecting People</title>
+<style>
+/* ============================================================
+   CONFIG — lo único que hay que cambiar para reusar esta base
+   con otro cliente: logo, nombre, colores y los botones.
+   ============================================================ */
+:root{
+  --accent1:#ef3b6a;   /* rojo de marca */
+  --accent2:#8b3bef;   /* morado de marca */
+  --bg1:#1c1030; --bg2:#2a1245; --bg3:#3a1240;
+  --fg:#f3f1f7; --fg-dim:#cbb8e0;
+}
+</style>
+<style>
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; min-height:100vh;
+  background:linear-gradient(165deg,var(--bg1) 0%,var(--bg2) 45%,var(--bg3) 100%);
+  color:var(--fg);
+  font-family:'Montserrat',system-ui,-apple-system,sans-serif;
+  display:flex; justify-content:center; align-items:center;
+  padding:40px 20px;
+}
+.wrap{width:100%; max-width:420px; display:flex; flex-direction:column; align-items:center}
+.logo{height:34px; margin-bottom:14px}
+.wordmark{font-weight:800; font-size:17px; letter-spacing:.01em; margin-bottom:2px}
+.wordmark .p1{color:var(--accent1)} .wordmark .p2{color:var(--accent2)}
+.tagline{font-size:11.5px; color:var(--fg-dim); letter-spacing:.08em; text-transform:uppercase; margin-bottom:30px; text-align:center}
+
+.btn{
+  display:flex; align-items:center; gap:14px; width:100%;
+  padding:18px 20px; margin-bottom:14px; border-radius:16px;
+  text-decoration:none; color:#fff;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:15.5px;
+  border:1px solid rgba(255,255,255,.12);
+  transition:transform .12s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn .icon{font-size:22px; flex:0 0 auto; width:26px; text-align:center}
+.btn .txt{flex:1}
+.btn .txt small{display:block; font-weight:500; font-size:11.5px; color:rgba(255,255,255,.75); margin-top:2px}
+
+.btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2)); border:none; box-shadow:0 10px 30px -12px rgba(239,59,106,.5)}
+.btn-secondary{background:rgba(255,255,255,.06)}
+.btn-secondary:hover{background:rgba(255,255,255,.1)}
+
+.foot{margin-top:22px; font-size:11px; color:rgba(255,255,255,.4); text-align:center}
+.foot a{color:rgba(255,255,255,.55); text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="wordmark"><span class="p1">P</span>rospecting <span class="p2">P</span>eople</div>
+  <div class="tagline">Agencia de contenido con IA</div>
+
+  <a class="btn btn-primary" href="https://swtf0033-cmyk.github.io/prospectingpeople777/evaluacion__marca.html?origen=biohub_evaluacion">
+    <span class="icon">&#128203;</span>
+    <span class="txt">Tu plan gratis en 2 min<small>Evaluación de marca + tu plan de 4 semanas</small></span>
+  </a>
+
+  <a class="btn btn-secondary" href="https://calendar.app.google/ZCtwzvDKD2kdrCvf7" target="_blank" rel="noopener">
+    <span class="icon">&#128197;</span>
+    <span class="txt">Agendar llamada<small>20 min, sin compromiso</small></span>
+  </a>
+
+  <a class="btn btn-secondary" href="https://wa.me/573128749114?text=%C2%A1Hola!%20Vengo%20de%20Instagram%20y%20tengo%20una%20duda%20%F0%9F%91%8B">
+    <span class="icon">&#128172;</span>
+    <span class="txt">Escríbenos por WhatsApp<small>Resolvemos tu duda rápido</small></span>
+  </a>
+
+  <div class="foot">@prospecting_people</div>
+</div>
+</body>
+</html>
